@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe all cards and sections
     const animatedElements = document.querySelectorAll(
-        '.about-card, .team-card, .persona-card, .placeholder-card, .timeline-item, .motivation-box'
+        '.about-card, .team-card, .persona-card, .placeholder-card, .timeline-item, .motivation-box, ' +
+        '.journey-map, .survey-card, .interview-card, .lit-card, .req-card, .prototype-link-box'
     );
 
     animatedElements.forEach(el => {

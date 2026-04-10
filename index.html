@@ -18,8 +18,10 @@
             <li><a href="#about">About</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#personas">Personas</a></li>
+            <li><a href="#journey">Journey Map</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#design">Design</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#prototype">Prototype</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
@@ -65,12 +67,15 @@
             </div>
 
             <div class="motivation-box">
-                <h3>Motivation</h3>
+                <h3>Motivation (The Why)</h3>
                 <p>
-                    In modern Chinese society, the rapid pace of urbanization and digital transformation has created a growing emotional gap between generations. Younger family members are deeply immersed in digital culture, while grandparents often feel disconnected from the fast-evolving technological world. Traditional family gatherings, such as the Chinese New Year's Eve dinner, remain one of the few moments where all generations come together. However, even during these precious occasions, meaningful intergenerational interaction is often lacking &mdash; younger members may be absorbed in their phones while elders sit quietly.
+                    In modern Chinese society, the rapid pace of urbanization and digital transformation has created a growing emotional gap between generations. Younger family members are deeply immersed in digital culture, while grandparents often feel disconnected from the fast-evolving technological world. Traditional family gatherings, such as the Chinese New Year's Eve dinner, remain one of the few moments where all generations come together. However, even during these precious occasions, meaningful intergenerational interaction is often lacking &mdash; younger members may be absorbed in their phones while elders sit quietly [1].
                 </p>
                 <p>
-                    <strong>Bridge of Time</strong> aims to transform these shared moments into playful, engaging experiences that celebrate cultural heritage while fostering genuine emotional connections across generations. By designing a mobile web application with tangible and potentially XR-enhanced interactions, we hope to create a "bridge" that connects the wisdom of the past with the energy of the present.
+                    Research shows that the mere presence of mobile devices degrades in-person social interaction quality [1], while intergenerational storytelling has been proven to strengthen family identity and emotional bonding [2]. Game-based approaches have also shown promise in fostering communication between generations in family settings [3]. Yet existing communication tools like WeChat lack dedicated features for cross-generational shared activities, elder-friendly interfaces, or collaborative experiences that leverage each generation's strengths.
+                </p>
+                <p>
+                    <strong>Bridge of Time</strong> aims to transform these shared moments into playful, engaging experiences that celebrate cultural heritage while fostering genuine emotional connections across generations. By designing a mobile web application with inclusive, accessible interactions, we hope to create a "bridge" that connects the wisdom of the past with the energy of the present.
                 </p>
             </div>
         </div>
@@ -83,30 +88,22 @@
             <p class="section-desc">Group B4-3 | CPT208 Human-Centric Computing | AY2025-26</p>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-avatar">
-                        <div class="avatar-placeholder">H</div>
-                    </div>
+                    <div class="team-avatar"><div class="avatar-placeholder">HY</div></div>
                     <h3>Haoyu Huang</h3>
                     <p class="team-id">Student ID: 2254070</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">
-                        <div class="avatar-placeholder">M2</div>
-                    </div>
+                    <div class="team-avatar"><div class="avatar-placeholder">YL</div></div>
                     <h3>Yilang Zhou</h3>
                     <p class="team-id">Student ID: 2362835</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">
-                        <div class="avatar-placeholder">M3</div>
-                    </div>
+                    <div class="team-avatar"><div class="avatar-placeholder">HX</div></div>
                     <h3>Huixin Zhang</h3>
                     <p class="team-id">Student ID: 2360890</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">
-                        <div class="avatar-placeholder">M4</div>
-                    </div>
+                    <div class="team-avatar"><div class="avatar-placeholder">MZ</div></div>
                     <h3>Mingze Yin</h3>
                     <p class="team-id">Student ID: 2360890</p>
                 </div>
@@ -124,9 +121,7 @@
                 <!-- Persona 1: Grandchild -->
                 <div class="persona-card persona-young">
                     <div class="persona-header">
-                        <div class="persona-avatar young-avatar">
-                            <span>&#128102;</span>
-                        </div>
+                        <div class="persona-avatar young-avatar"><span>&#128102;</span></div>
                         <div>
                             <h3>Xiao Ming (Grandchild)</h3>
                             <p class="persona-age">Age: 20 | College Student</p>
@@ -156,9 +151,7 @@
                             </div>
                             <div class="persona-tag-group">
                                 <h4>Tech Proficiency</h4>
-                                <div class="proficiency-bar">
-                                    <div class="proficiency-fill" style="width: 95%"></div>
-                                </div>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%"></div></div>
                                 <p class="proficiency-label">Expert (95%) &mdash; Smartphones, apps, social media, gaming</p>
                             </div>
                         </div>
@@ -171,9 +164,7 @@
                 <!-- Persona 2: Grandmother -->
                 <div class="persona-card persona-elder">
                     <div class="persona-header">
-                        <div class="persona-avatar elder-avatar">
-                            <span>&#128117;</span>
-                        </div>
+                        <div class="persona-avatar elder-avatar"><span>&#128117;</span></div>
                         <div>
                             <h3>Grandma Wang (Grandmother)</h3>
                             <p class="persona-age">Age: 72 | Retired Teacher</p>
@@ -203,9 +194,7 @@
                             </div>
                             <div class="persona-tag-group">
                                 <h4>Tech Proficiency</h4>
-                                <div class="proficiency-bar">
-                                    <div class="proficiency-fill" style="width: 25%"></div>
-                                </div>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 25%"></div></div>
                                 <p class="proficiency-label">Beginner (25%) &mdash; WeChat calls, short videos only</p>
                             </div>
                         </div>
@@ -218,72 +207,454 @@
         </div>
     </section>
 
-    <!-- Research Section (Placeholder) -->
-    <section id="research" class="section section-alt">
+    <!-- User Journey Map Section -->
+    <section id="journey" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">User Journey Maps</h2>
+            <p class="section-desc">Current-state journey maps showing pain points, followed by future-state maps showing how Bridge of Time transforms the experience</p>
+
+            <h3 style="text-align:center; font-size:1.6rem; margin-bottom:8px; color:#e74c3c;">Current State: Without Bridge of Time</h3>
+            <p class="section-desc" style="margin-bottom:32px;">The pain points both generations experience during a typical family gathering today</p>
+
+            <!-- Journey Map 1: Xiao Ming -->
+            <div class="journey-map">
+                <div class="journey-header journey-young">
+                    <h3>Xiao Ming's Journey &mdash; Chinese New Year's Eve Dinner</h3>
+                    <p>Goal: Connect meaningfully with grandma during the family gathering</p>
+                </div>
+                <div class="journey-body">
+                    <div class="journey-phases">
+                        <div class="journey-phase">
+                            <div class="phase-label">Arrival</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Arrives home after long train ride, greets family, puts down luggage</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "It's been months since I saw grandma. I should spend time with her."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> WeChat messages with family during transit</p>
+                                <div class="emotion-indicator emotion-positive">Excited</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">Dinner Begins</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Sits at table, tries to chat with grandma, asks "how are you?"</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I don't know what else to say after the basic greetings..."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Face-to-face conversation</p>
+                                <div class="emotion-indicator emotion-neutral">Awkward</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">During Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Runs out of topics, picks up phone, scrolls social media</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I feel guilty scrolling but I genuinely don't know what to talk about with her."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Phone (social media, games)</p>
+                                <div class="emotion-indicator emotion-negative">Guilty &amp; Disconnected</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">After Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Retreats to room, chats with friends online, avoids prolonged family time</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "Another year where I didn't really connect with grandma. I wish it was different."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Phone (messaging friends)</p>
+                                <div class="emotion-indicator emotion-negative">Regretful</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-opportunities">
+                        <h4>Opportunities</h4>
+                        <ul>
+                            <li>Provide structured conversation starters that bridge the generational gap</li>
+                            <li>Replace phone-scrolling with a shared activity on the same device</li>
+                            <li>Create collaborative tasks where both generations contribute their strengths</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Map 2: Grandma Wang -->
+            <div class="journey-map" style="margin-top: 40px;">
+                <div class="journey-header journey-elder">
+                    <h3>Grandma Wang's Journey &mdash; Chinese New Year's Eve Dinner</h3>
+                    <p>Goal: Share her stories and traditions with grandchildren and feel connected</p>
+                </div>
+                <div class="journey-body">
+                    <div class="journey-phases">
+                        <div class="journey-phase">
+                            <div class="phase-label">Preparation</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Spends all day cooking traditional dishes, decorates the house with red paper</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "The whole family will be together tonight. I can't wait to see the grandchildren!"</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Kitchen, traditional decorations</p>
+                                <div class="emotion-indicator emotion-positive">Joyful &amp; Anticipating</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">Dinner Begins</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Serves dishes, tries to start conversations, asks about school/work</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "They're all here, but their eyes are on their phones, not on each other."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Face-to-face at dinner table</p>
+                                <div class="emotion-indicator emotion-neutral">Hopeful but Worried</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">During Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Tries to tell a story about the past, gets brief responses, eventually stops talking</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "Nobody wants to listen to my old stories. Maybe I'm boring to them."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Verbal storytelling (ignored)</p>
+                                <div class="emotion-indicator emotion-negative">Lonely &amp; Ignored</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label">After Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Cleans up alone while grandchildren disperse to their rooms/phones</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I spent all day cooking and we barely talked. The traditions are disappearing."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Alone in the kitchen</p>
+                                <div class="emotion-indicator emotion-negative">Sad &amp; Disappointed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-opportunities">
+                        <h4>Opportunities</h4>
+                        <ul>
+                            <li>Provide a voice-first storytelling tool so grandma can share stories naturally [4]</li>
+                            <li>Create activities where grandma's knowledge is the key asset (cooking, traditions)</li>
+                            <li>Build a shared memory space that gives lasting value to the gathering [4]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future State Journey Maps -->
+            <h3 style="text-align:center; font-size:1.6rem; margin-top:60px; margin-bottom:8px; color:#2c3e50;">Future State: With Bridge of Time</h3>
+            <p class="section-desc">How the same scenario transforms when both generations use Bridge of Time together</p>
+
+            <!-- Future: Xiao Ming -->
+            <div class="journey-map">
+                <div class="journey-header" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                    <h3>Xiao Ming's Journey &mdash; With Bridge of Time</h3>
+                    <p>Goal: Have a fun, meaningful evening with grandma using shared activities</p>
+                </div>
+                <div class="journey-body">
+                    <div class="journey-phases">
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#27ae60;">Arrival</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Arrives home, opens Bridge of Time, selects "Grandchild" role</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I prepared something fun for us to do tonight!"</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Splash &amp; Role Selection</p>
+                                <div class="emotion-indicator emotion-positive">Excited &amp; Prepared</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#27ae60;">Dinner Begins</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Shows grandma the app, invites her to record a family story together</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "Grandma's face lit up when I asked her to tell her Spring Festival story!"</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Family Stories (voice recording)</p>
+                                <div class="emotion-indicator emotion-positive">Warm &amp; Connected</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#27ae60;">During Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Plays Traditions Quiz together, laughs when grandma wins; follows dumpling recipe side by side</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I never knew the red paper was about a monster called Nian! This is actually fun."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Quiz &amp; Cook Together</p>
+                                <div class="emotion-indicator emotion-positive">Joyful &amp; Engaged</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#27ae60;">After Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Adds photos of their lopsided dumplings to the Memory Album, browses old family photos with grandma</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "This is the best New Year's Eve in years. I actually know grandma's story now."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Memory Album</p>
+                                <div class="emotion-indicator emotion-positive">Fulfilled &amp; Grateful</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future: Grandma Wang -->
+            <div class="journey-map" style="margin-top: 40px;">
+                <div class="journey-header" style="background: linear-gradient(135deg, #f39c12, #f1c40f);">
+                    <h3>Grandma Wang's Journey &mdash; With Bridge of Time</h3>
+                    <p>Goal: Share her stories, feel valued, and enjoy the evening with her grandchildren</p>
+                </div>
+                <div class="journey-body">
+                    <div class="journey-phases">
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#f39c12;">Preparation</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Cooks traditional dishes as usual, looking forward to the family gathering</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I wonder if the grandchildren will want to hear my stories this year."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Kitchen, traditional decorations</p>
+                                <div class="emotion-indicator emotion-positive">Hopeful</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#f39c12;">Dinner Begins</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Xiao Ming shows her the app with big buttons; she taps "Record a Story" and starts talking</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "He actually wants to hear my story! And I can just speak &mdash; no typing needed!"</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Family Stories (voice input)</p>
+                                <div class="emotion-indicator emotion-positive">Surprised &amp; Delighted</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#f39c12;">During Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Dominates the Traditions Quiz (she's the expert!); teaches Xiao Ming her dumpling-pleating technique</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "I actually know more than them for once! They're listening and laughing with me."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Quiz &amp; Cook Together</p>
+                                <div class="emotion-indicator emotion-positive">Proud &amp; Valued</div>
+                            </div>
+                        </div>
+                        <div class="journey-phase">
+                            <div class="phase-label" style="background:#f39c12;">After Dinner</div>
+                            <div class="phase-content">
+                                <p class="phase-action"><strong>Actions:</strong> Browses the Memory Album with everyone, sees her stories saved alongside family photos</p>
+                                <p class="phase-thought"><strong>Thoughts:</strong> "My stories won't be forgotten. The children care. This is the happiest New Year's Eve."</p>
+                                <p class="phase-touchpoint"><strong>Touchpoints:</strong> Bridge of Time &mdash; Memory Album</p>
+                                <div class="emotion-indicator emotion-positive">Happy &amp; At Peace</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="research" class="section">
         <div class="container">
             <h2 class="section-title">Research</h2>
-            <p class="section-desc">Literature review and competitive analysis (Coming in Week 4)</p>
-            <div class="placeholder-grid">
-                <div class="placeholder-card">
-                    <h3>Academic Papers</h3>
-                    <p>4 academic papers analyzing intergenerational communication, playful design, and family bonding through technology.</p>
-                    <span class="status-badge">In Progress</span>
+            <p class="section-desc">Literature review, competitive analysis, and primary user research findings</p>
+
+            <!-- Survey Data -->
+            <div class="research-block">
+                <h3 class="research-subtitle">Survey &amp; Interview Findings</h3>
+                <p>We conducted an online survey (n=19) and semi-structured interviews with 5 grandparents (aged 60+) to understand intergenerational communication challenges.</p>
+
+                <div class="survey-grid">
+                    <div class="survey-card">
+                        <div class="survey-stat">52.6%</div>
+                        <p>report <strong>generation gap / different ideas</strong> as the biggest communication difficulty</p>
+                    </div>
+                    <div class="survey-card">
+                        <div class="survey-stat">63.2%</div>
+                        <p>want to <strong>share photos &amp; stories</strong> as the primary interaction mode</p>
+                    </div>
+                    <div class="survey-card">
+                        <div class="survey-stat">84.2%</div>
+                        <p>believe <strong>dedicated tools can improve</strong> family bonds</p>
+                    </div>
+                    <div class="survey-card">
+                        <div class="survey-stat">78.9%</div>
+                        <p>prefer a <strong>mobile app</strong> platform</p>
+                    </div>
+                    <div class="survey-card">
+                        <div class="survey-stat">68.4%</div>
+                        <p>prefer interaction during <strong>holidays &amp; festivals</strong></p>
+                    </div>
+                    <div class="survey-card">
+                        <div class="survey-stat">42.1%</div>
+                        <p>say <strong>ease of use</strong> is the most valued app feature</p>
+                    </div>
                 </div>
-                <div class="placeholder-card">
-                    <h3>Commercial Products</h3>
-                    <p>4 commercial products reviewed for strengths and gaps in connecting different generations.</p>
-                    <span class="status-badge">In Progress</span>
+
+                <div class="survey-details">
+                    <h4>Detailed Survey Results (n=19)</h4>
+                    <table class="survey-table">
+                        <thead><tr><th>Question</th><th>Top Response</th><th>%</th></tr></thead>
+                        <tbody>
+                            <tr><td>Age distribution</td><td>21-30 years old</td><td>63.2%</td></tr>
+                            <tr><td>Communication frequency with elders</td><td>Daily / Several times per week</td><td>84.2%</td></tr>
+                            <tr><td>Biggest communication difficulty</td><td>Generation gap (different ideas)</td><td>52.6%</td></tr>
+                            <tr><td>Desired app feature</td><td>Share photos &amp; stories together</td><td>63.2%</td></tr>
+                            <tr><td>Most common tool</td><td>WeChat</td><td>63.2%</td></tr>
+                            <tr><td>Favourite family activity</td><td>Simple games together</td><td>36.8%</td></tr>
+                            <tr><td>Interface complexity preference</td><td>Feature-rich</td><td>52.6%</td></tr>
+                            <tr><td>Preferred platform</td><td>Mobile app</td><td>78.9%</td></tr>
+                            <tr><td>Interaction time preference</td><td>Holidays &amp; festivals</td><td>68.4%</td></tr>
+                            <tr><td>Interaction duration</td><td>10-30 minutes</td><td>47.4%</td></tr>
+                            <tr><td>Can dedicated tools improve bonds?</td><td>Yes (definitely + probably)</td><td>84.2%</td></tr>
+                            <tr><td>Willing to try family interaction app?</td><td>Yes (very willing + willing)</td><td>57.9%</td></tr>
+                            <tr><td>Most valued feature</td><td>Easy to use</td><td>42.1%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="placeholder-card">
-                    <h3>User Interviews</h3>
-                    <p>Field observations and interviews with families to understand real pain points during gatherings.</p>
-                    <span class="status-badge">Planned</span>
+
+                <div class="interview-section">
+                    <h4>Interview Insights (5 Grandparents, aged 60+)</h4>
+                    <div class="interview-grid">
+                        <div class="interview-card">
+                            <div class="interview-q">Q: How often do you see your grandchildren?</div>
+                            <blockquote>"Not very often. Their parents are busy with work, and we don't live close by. We usually only get together for dinner on weekends."</blockquote>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-q">Q: Do you find it easy to chat on your phone?</div>
+                            <blockquote>"Not really. The text is too small, my eyesight is bad. There are too many functions, and I can't remember how to use them all."</blockquote>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-q">Q: What's the biggest difficulty talking to grandchildren?</div>
+                            <blockquote>"No common topics! I don't understand the games, influencers, or internet slang they talk about, and they're not interested in my stories."</blockquote>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-q">Q: What kind of tool would help you communicate better?</div>
+                            <blockquote>"I just want something simple! Big text, big buttons, no learning curve. Ideally one-tap video calls and voice messages."</blockquote>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-q">Q: What do current chat apps lack?</div>
+                            <blockquote>"Intergenerational interaction features! They're all made for young people, with no content designed for grandparents and kids to use together."</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Key Requirements Section -->
+    <section id="requirements" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Key Requirements</h2>
+            <p class="section-desc">Based on our user research (surveys, interviews, and literature review), we identified 3 must-have requirements for Bridge of Time to be considered a "playful" intergenerational experience</p>
+
+            <div class="req-grid">
+                <div class="req-card">
+                    <div class="req-number">1</div>
+                    <h3>Shared Collaborative Activities</h3>
+                    <p>The system must provide activities that <strong>require both generations to participate together</strong> &mdash; neither can complete the task alone. This creates positive interdependence [5] and gives both generations a reason to engage. Research shows that game-based interactions effectively foster intergenerational communication [3]. Our survey shows 63.2% want to share photos/stories together, and 36.8% want simple games to play together.</p>
+                    <div class="req-evidence">
+                        <span class="tag tag-goal">Survey: 63.2% want shared activities</span>
+                        <span class="tag tag-goal">Interview: "I wish we could do something together"</span>
+                    </div>
+                </div>
+                <div class="req-card">
+                    <div class="req-number">2</div>
+                    <h3>Elder-Friendly Accessible Interface</h3>
+                    <p>The interface must use <strong>large touch targets, high-contrast visuals, simple navigation, and voice input</strong> as a primary interaction mode for elderly users [6]. 42.1% of respondents say ease-of-use is the most valued feature, and interview participants consistently described current apps as "too small" and "too complicated."</p>
+                    <div class="req-evidence">
+                        <span class="tag tag-goal">Survey: 42.1% prioritise ease of use</span>
+                        <span class="tag tag-goal">Interview: "Big text, big buttons, open and use right away"</span>
+                    </div>
+                </div>
+                <div class="req-card">
+                    <div class="req-number">3</div>
+                    <h3>Reversed Knowledge Hierarchy</h3>
+                    <p>The system must include features where <strong>grandparents are the experts</strong> &mdash; sharing traditions, recipes, and cultural knowledge &mdash; reversing the typical tech-teaching dynamic [7][8]. This restores elders' sense of value and gives grandchildren genuine reasons to listen, not out of politeness but curiosity.</p>
+                    <div class="req-evidence">
+                        <span class="tag tag-goal">Literature: Reverse mentoring boosts elder self-efficacy [8]</span>
+                        <span class="tag tag-goal">Interview: "Nobody wants to listen to my old stories"</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Design Section (Placeholder) -->
-    <section id="design" class="section">
+    <!-- Prototype Section -->
+    <section id="prototype" class="section">
+        <div class="container">
+            <h2 class="section-title">Prototype</h2>
+            <p class="section-desc">Our interactive prototype featuring 4 core features designed for intergenerational play</p>
+
+            <div class="prototype-link-box">
+                <h3>Try the Live Prototype</h3>
+                <p>Click below to explore the full interactive Bridge of Time prototype:</p>
+                <a href="https://mural-elm-91000837.figma.site" target="_blank" class="hero-btn" style="margin-top: 16px;">Open Prototype</a>
+            </div>
+
+            <div class="prototype-features">
+                <h3 style="text-align:center; margin-bottom: 32px;">Core Features</h3>
+                <div class="about-grid">
+                    <div class="about-card" style="border-left: 4px solid #e67e22;">
+                        <div class="about-icon">&#128214;</div>
+                        <h3>Family Stories</h3>
+                        <p>Grandparents narrate stories via voice recording; grandchildren listen, react, and contribute photos. Creates co-authored family narratives.</p>
+                    </div>
+                    <div class="about-card" style="border-left: 4px solid #27ae60;">
+                        <div class="about-icon">&#129375;</div>
+                        <h3>Cook Together</h3>
+                        <p>Step-by-step collaborative recipes with role-based tasks. Grandparents handle seasoning, grandchildren handle timers and photos.</p>
+                    </div>
+                    <div class="about-card" style="border-left: 4px solid #e74c3c;">
+                        <div class="about-icon">&#127919;</div>
+                        <h3>Traditions Quiz</h3>
+                        <p>Cultural knowledge quiz where grandparents are the experts. Playful format with fun facts about Spring Festival traditions.</p>
+                    </div>
+                    <div class="about-card" style="border-left: 4px solid #8e44ad;">
+                        <div class="about-icon">&#128248;</div>
+                        <h3>Memory Album</h3>
+                        <p>Timeline-based family photo collection. Both generations add photos and captions across years, building a shared narrative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Timeline -->
+    <section id="design" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Design Process</h2>
-            <p class="section-desc">Ideation, prototyping, and iteration (Coming in Week 6-8)</p>
+            <p class="section-desc">Our iterative design journey from Week 1 to Week 10</p>
             <div class="timeline">
                 <div class="timeline-item done">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 1-2</h3>
-                        <p>Topic selection, team formation, portfolio setup</p>
+                        <p>Topic selection, team formation, portfolio setup on GitHub Pages</p>
+                    </div>
+                </div>
+                <div class="timeline-item done">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Week 3-4</h3>
+                        <p>User research: surveys (n=19), interviews (n=5), 2 personas created, user journey maps</p>
                     </div>
                 </div>
                 <div class="timeline-item active">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Week 3-4</h3>
-                        <p>User research, personas, journey mapping</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
                         <h3>Week 5-6</h3>
-                        <p>Crazy Eights, design alternatives, low-fi prototype</p>
+                        <p>Literature review, key requirements defined, low-fi to high-fi prototype development</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 7-8</h3>
-                        <p>High-fi prototype, poster presentation, alpha system</p>
+                        <p>Poster presentation, alpha system demo, initial user testing</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 9-10</h3>
-                        <p>Usability testing, iteration, final submission</p>
+                        <p>Usability testing, iteration, final submission (portfolio + system + video)</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="section">
+        <div class="container">
+            <h2 class="section-title">References</h2>
+            <div class="references-list">
+                <p>[1] S. Misra, L. Cheng, J. Genevie, and M. Yuan, "The iPhone effect: The quality of in-person social interactions in the presence of mobile devices," <em>Environ. Behav.</em>, vol. 48, no. 2, pp. 275-298, 2016.</p>
+                <p>[2] R. Fivush, J. G. Bohanek, and W. Zaman, "Personal and intergenerational narratives in relation to adolescents' well-being," <em>New Dir. Child Adolesc. Dev.</em>, no. 131, pp. 45-57, 2011.</p>
+                <p>[3] M. Sun, Z. Zhao, and H. Liu, "Fostering intergenerational communication through games: An exploratory study on metaphorical life games in family settings," <em>Front. Public Health</em>, vol. 13, p. 1532603, 2025.</p>
+                <p>[4] J. Jones and M. S. Ackerman, "Learning from family mysteries: Accounting for untold stories in family memory practices," <em>Proc. ACM Hum.-Comput. Interact.</em>, vol. 4, no. CSCW1, pp. 1-22, 2020.</p>
+                <p>[5] B. Stewart, N. Evans, R. Smith, and R. Vernik, "Intergenerational engagement within immersive environments: A scoping literature review," <em>J. Intergener. Relatsh.</em>, pp. 1-24, 2025.</p>
+                <p>[6] T. Jeong, G. Hwang, and D. Y. Kim, "A generative AI framework for cognitive intervention in older adults: An integrated engineering design and clinical protocol," <em>Healthcare</em>, vol. 13, no. 24, p. 3225, 2025.</p>
+                <p>[7] T. Correa, "Bottom-up technology transmission within families: Exploring how youths influence their parents' digital media use with dyadic data," <em>J. Commun.</em>, vol. 64, no. 1, pp. 103-124, 2014.</p>
+                <p>[8] J. Hu, M. Ye, H. Wan, and W. Leong, "The impact of digital reverse mentoring on older adults' digital literacy: Mediating roles of self-perceptions of aging and self-efficacy," <em>Innov. Aging</em>, vol. 10, no. 3, igag001, 2026.</p>
             </div>
         </div>
     </section>
