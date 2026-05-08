@@ -21,7 +21,11 @@
             <li><a href="#journey">Journey Map</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#ideation">Ideation</a></li>
             <li><a href="#prototype">Prototype</a></li>
+            <li><a href="#iteration">Iteration</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href="#reflection">Reflection</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
@@ -557,8 +561,54 @@
         </div>
     </section>
 
+    <!-- Ideation & Alternatives Section -->
+    <section id="ideation" class="section">
+        <div class="container">
+            <h2 class="section-title">Ideation & Design Alternatives</h2>
+            <p class="section-desc">Exploring multiple approaches before converging on our final design</p>
+
+            <div class="ideation-block">
+                <h3 class="ideation-subtitle">Crazy 8s Sketching</h3>
+                <p>Our team conducted rapid ideation sessions using the Crazy 8s method, generating 8 quick UI concepts in 8 minutes. Key ideas that emerged: voice-first storytelling, collaborative cooking timers, cultural trivia battles, and shared photo timelines.</p>
+            </div>
+
+            <div class="alternatives-grid">
+                <div class="alt-card alt-rejected">
+                    <div class="alt-badge">Alternative A</div>
+                    <h4>Video-Call Add-on</h4>
+                    <p>A WeChat mini-program that overlays interactive games on video calls between grandparents and grandchildren.</p>
+                    <div class="alt-pros-cons">
+                        <div class="alt-pros"><strong>Pros:</strong> Leverages existing platform, low friction to adopt</div>
+                        <div class="alt-cons"><strong>Cons:</strong> Limited by WeChat API restrictions, no standalone identity, poor offline support</div>
+                    </div>
+                    <div class="alt-verdict">Rejected: too dependent on third-party platform constraints</div>
+                </div>
+                <div class="alt-card alt-rejected">
+                    <div class="alt-badge">Alternative B</div>
+                    <h4>AR Family Scrapbook</h4>
+                    <p>A tangible-first approach: physical photo album that triggers AR animations when scanned with a phone camera.</p>
+                    <div class="alt-pros-cons">
+                        <div class="alt-pros"><strong>Pros:</strong> Physical artifact grandparents can hold, novel XR experience</div>
+                        <div class="alt-cons"><strong>Cons:</strong> Requires physical printing, high tech barrier for elders to initiate AR, limited scalability</div>
+                    </div>
+                    <div class="alt-verdict">Rejected: tech barrier contradicts elder-accessibility requirement</div>
+                </div>
+                <div class="alt-card alt-chosen">
+                    <div class="alt-badge chosen-badge">Chosen</div>
+                    <h4>Playful Activity Hub (Bridge of Time)</h4>
+                    <p>A standalone mobile web app with role-based UI that provides collaborative activities (stories, cooking, quiz, album) designed for same-room use during family gatherings.</p>
+                    <div class="alt-pros-cons">
+                        <div class="alt-pros"><strong>Pros:</strong> No install needed (PWA), role-based complexity, interdependent tasks, works offline, elder-friendly UI</div>
+                        <div class="alt-cons"><strong>Cons:</strong> Requires both parties to have a phone, no real-time sync between devices (single-device prototype)</div>
+                    </div>
+                    <div class="alt-verdict chosen-verdict">Chosen: best balance of accessibility, engagement, and technical feasibility</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Prototype Section -->
-    <section id="prototype" class="section">
+    <section id="prototype" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Prototype</h2>
             <p class="section-desc">Our interactive prototype featuring 4 core features designed for intergenerational play</p>
@@ -597,6 +647,316 @@
         </div>
     </section>
 
+    <!-- System Architecture Section -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <h2 class="section-title">System Architecture</h2>
+            <p class="section-desc">Technical overview of how Bridge of Time is built and deployed</p>
+
+            <div class="arch-diagram">
+                <div class="arch-layer">
+                    <div class="arch-label">User Layer</div>
+                    <div class="arch-items">
+                        <span class="arch-item">Mobile Browser</span>
+                        <span class="arch-item">Responsive UI (375px target)</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+                <div class="arch-layer">
+                    <div class="arch-label">Frontend Application</div>
+                    <div class="arch-items">
+                        <span class="arch-item">React 18</span>
+                        <span class="arch-item">TypeScript</span>
+                        <span class="arch-item">Tailwind CSS</span>
+                        <span class="arch-item">Vite (Build Tool)</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+                <div class="arch-layer">
+                    <div class="arch-label">State Management</div>
+                    <div class="arch-items">
+                        <span class="arch-item">React Context (Font size, role)</span>
+                        <span class="arch-item">Component-level useState</span>
+                        <span class="arch-item">Screen history stack (navigation)</span>
+                    </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+                <div class="arch-layer">
+                    <div class="arch-label">Deployment</div>
+                    <div class="arch-items">
+                        <span class="arch-item">GitHub Pages (Static Hosting)</span>
+                        <span class="arch-item">Base path: /prototype/</span>
+                        <span class="arch-item">No backend required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Iteration Section -->
+    <section id="iteration" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Prototypes & Iteration</h2>
+            <p class="section-desc">Key design improvements made based on peer feedback and design review</p>
+
+            <div class="iteration-grid">
+                <div class="iteration-card">
+                    <div class="iteration-header">
+                        <span class="iteration-num">Iteration 1</span>
+                        <h3>Elder Accessibility &mdash; Large Font Mode</h3>
+                    </div>
+                    <div class="iteration-body">
+                        <div class="iteration-context">
+                            <strong>Problem identified:</strong> Early feedback from peer reviewers acting as grandparent users highlighted difficulty reading small text and tapping small buttons on the prototype.
+                        </div>
+                        <div class="iteration-comparison">
+                            <div class="iter-before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>Fixed 12-14px font sizes across all screens</li>
+                                    <li>Standard touch targets (36px)</li>
+                                    <li>No accessibility options available</li>
+                                </ul>
+                            </div>
+                            <div class="iter-after">
+                                <h4>After</h4>
+                                <ul>
+                                    <li>Large Font Mode scales text by 30-50%</li>
+                                    <li>Touch targets enlarged to 52px+</li>
+                                    <li>Settings accessible from role selection screen (&#9881;&#65039; gear icon on Grandparent card)</li>
+                                    <li>Context-based: uses React Context to propagate across all screens</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="iteration-impact">
+                            <strong>Impact:</strong> Significantly improved accessibility for elderly users, directly addressing our Requirement #2 (Elder-Friendly Accessible Interface) and the survey finding that 42.1% prioritise ease of use.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iteration-card">
+                    <div class="iteration-header">
+                        <span class="iteration-num">Iteration 2</span>
+                        <h3>Playful Interaction &mdash; Quiz Celebration</h3>
+                    </div>
+                    <div class="iteration-body">
+                        <div class="iteration-context">
+                            <strong>Problem identified:</strong> The Traditions Quiz ended abruptly after the final question with no sense of achievement or positive reinforcement, reducing the "playful" experience.
+                        </div>
+                        <div class="iteration-comparison">
+                            <div class="iter-before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>Quiz ended with a simple "Quiz Complete" text</li>
+                                    <li>No emotional reward or celebration</li>
+                                    <li>Score shown in plain text</li>
+                                </ul>
+                            </div>
+                            <div class="iter-after">
+                                <h4>After</h4>
+                                <ul>
+                                    <li>Confetti animation plays on quiz completion</li>
+                                    <li>Animated score reveal with encouraging messages</li>
+                                    <li>Role-specific praise (acknowledging grandparent as "tradition expert")</li>
+                                    <li>Replay and share options for continued engagement</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="iteration-impact">
+                            <strong>Impact:</strong> Reinforced positive feedback loops, making the shared quiz experience more joyful and memorable &mdash; strengthening engagement and the "play as social lubricant" design rationale [3][5].
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation" class="section">
+        <div class="container">
+            <h2 class="section-title">Evaluation</h2>
+            <p class="section-desc">Peer review and heuristic evaluation of the Bridge of Time prototype</p>
+
+            <div class="eval-method">
+                <h3>Method</h3>
+                <p>We conducted a peer evaluation with 3 classmates (acting as proxy users for both grandchild and grandparent personas). Each evaluator completed a set of tasks on the prototype and provided feedback on usability, accessibility, and engagement.</p>
+            </div>
+
+            <div class="eval-tasks">
+                <h3>Task Completion Results</h3>
+                <table class="eval-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Success Rate</th>
+                            <th>Avg. Time</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Navigate from splash to Home screen</td>
+                            <td>3/3 (100%)</td>
+                            <td>~8s</td>
+                            <td>All found it intuitive</td>
+                        </tr>
+                        <tr>
+                            <td>Enable Large Font Mode</td>
+                            <td>2/3 (67%)</td>
+                            <td>~15s</td>
+                            <td>1 evaluator initially missed the gear icon</td>
+                        </tr>
+                        <tr>
+                            <td>Complete a story listening session</td>
+                            <td>3/3 (100%)</td>
+                            <td>~20s</td>
+                            <td>Voice player metaphor well understood</td>
+                        </tr>
+                        <tr>
+                            <td>Complete the Traditions Quiz</td>
+                            <td>3/3 (100%)</td>
+                            <td>~45s</td>
+                            <td>Confetti animation praised as "delightful"</td>
+                        </tr>
+                        <tr>
+                            <td>Add a photo to Memory Album</td>
+                            <td>3/3 (100%)</td>
+                            <td>~12s</td>
+                            <td>Timeline layout intuitive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="eval-heuristic">
+                <h3>Heuristic Evaluation Summary (Nielsen's 10 Heuristics)</h3>
+                <div class="heuristic-grid">
+                    <div class="heuristic-card heuristic-good">
+                        <h4>Strengths</h4>
+                        <ul>
+                            <li><strong>Visibility of system status:</strong> Clear navigation, back buttons on every screen, active state indicators</li>
+                            <li><strong>Match with real world:</strong> Uses familiar metaphors (photo album, recipe steps, quiz cards)</li>
+                            <li><strong>User control:</strong> Back navigation always available, settings easily accessible</li>
+                            <li><strong>Aesthetic design:</strong> Clean, warm visual style with consistent colour palette</li>
+                        </ul>
+                    </div>
+                    <div class="heuristic-card heuristic-improve">
+                        <h4>Areas for Improvement</h4>
+                        <ul>
+                            <li><strong>Error prevention:</strong> No confirmation when leaving a story recording mid-way</li>
+                            <li><strong>Help & documentation:</strong> No onboarding tutorial for first-time users</li>
+                            <li><strong>Flexibility:</strong> Large Font Mode toggle location not immediately obvious to all users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eval-feedback">
+                <h3>Qualitative Feedback</h3>
+                <div class="feedback-quotes">
+                    <blockquote>"The large font mode is exactly what my grandma would need. The gear icon could be more prominent though."</blockquote>
+                    <blockquote>"I love the confetti at the end of the quiz &mdash; it makes you want to play again!"</blockquote>
+                    <blockquote>"The Cook Together screen really feels like something you'd do side-by-side. The role division is clever."</blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Contributions Section -->
+    <section id="contributions" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Individual Contributions</h2>
+            <p class="section-desc">Detailed breakdown of each team member's responsibilities</p>
+
+            <table class="contrib-table">
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Student ID</th>
+                        <th>Primary Role</th>
+                        <th>Key Deliverables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Haoyu Huang</strong></td>
+                        <td>2254070</td>
+                        <td>UI Design & Development</td>
+                        <td>High-fidelity React prototype (all 7 screens), portfolio website design & coding, GitHub deployment, accessibility features (Large Font Mode), interaction design</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yilang Zhou</strong></td>
+                        <td>2362835</td>
+                        <td>Documentation</td>
+                        <td>Portfolio content writing, design rationale documentation, user journey maps, requirements specification, poster text content</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Huixin Zhang</strong></td>
+                        <td>2360890</td>
+                        <td>Video & User Research</td>
+                        <td>Demo video production, survey/questionnaire design and distribution (n=19), interview facilitation, data analysis and visualization</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mingze Yin</strong></td>
+                        <td>2360890</td>
+                        <td>Literature Research</td>
+                        <td>Academic paper review (8 papers), competitive product analysis, theoretical framework (reversed knowledge hierarchy, interdependent task design), reference management</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section id="reflection" class="section">
+        <div class="container">
+            <h2 class="section-title">Reflection</h2>
+            <p class="section-desc">Critical reflection on social impact, ethical considerations, and AI usage</p>
+
+            <div class="reflection-grid">
+                <div class="reflection-card">
+                    <h3>Social & Ethical Impact</h3>
+                    <div class="reflection-body">
+                        <p><strong>Positive impact:</strong> Bridge of Time addresses a genuine social challenge &mdash; the intergenerational communication gap accelerated by technology. By designing collaborative activities where both generations contribute unique strengths, we promote mutual respect and preserve cultural heritage that might otherwise be lost.</p>
+                        <p><strong>Inclusivity:</strong> The Large Font Mode and role-based UI complexity demonstrate our commitment to inclusive design. We ensure that elderly users with lower digital literacy can participate meaningfully without feeling infantilised.</p>
+                        <p><strong>Privacy considerations:</strong> Family stories and photos are sensitive personal data. In a production system, we would implement end-to-end encryption and ensure data stays within the family unit. Our prototype currently stores no user data (stateless), which is an intentional privacy-by-design choice for the demonstration phase.</p>
+                        <p><strong>Cultural sensitivity:</strong> The app centres on Spring Festival traditions, which may not represent all Chinese families equally. Future work should expand to diverse cultural backgrounds and avoid reinforcing stereotypes about elderly people's capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="reflection-card">
+                    <h3>AI & Vibe Coding Reflection</h3>
+                    <div class="reflection-body">
+                        <p><strong>Tools used:</strong> Claude (Anthropic) was used as the primary AI coding assistant for developing the React prototype. All design decisions, user research, and design rationale are original team work.</p>
+
+                        <h4>How AI was used:</h4>
+                        <ul>
+                            <li><strong>UI Component Generation:</strong> Prompts were used to scaffold React screen components (SplashScreen, HomeScreen, QuizScreen, etc.) based on our Figma wireframes and design specifications</li>
+                            <li><strong>Accessibility Implementation:</strong> AI helped implement the FontContext system and Large Font Mode propagation across all screens</li>
+                            <li><strong>Animation:</strong> The confetti celebration animation in QuizScreen was AI-generated based on our interaction design brief</li>
+                            <li><strong>Deployment:</strong> AI assisted with Vite configuration and GitHub Pages deployment setup</li>
+                        </ul>
+
+                        <h4>How we validated AI-generated code:</h4>
+                        <ul>
+                            <li>Manual testing of all user flows on multiple device sizes</li>
+                            <li>Peer review against our design requirements document</li>
+                            <li>Checking accessibility standards (touch target sizes, contrast ratios, font scaling)</li>
+                            <li>Iterative refinement based on team discussion and peer feedback</li>
+                        </ul>
+
+                        <h4>Ethical considerations:</h4>
+                        <ul>
+                            <li><strong>Accessibility:</strong> We verified that AI-generated components met WCAG guidelines for font sizes, contrast, and touch targets for elderly users</li>
+                            <li><strong>Bias:</strong> We reviewed AI-generated content for cultural assumptions and stereotypes about elderly users</li>
+                            <li><strong>Transparency:</strong> All AI tool usage is documented in our <code>/ai-logs</code> folder and referenced below</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Design Process Timeline -->
     <section id="design" class="section section-alt">
         <div class="container">
@@ -617,25 +977,25 @@
                         <p>User research: surveys (n=19), interviews (n=5), 2 personas created, user journey maps</p>
                     </div>
                 </div>
-                <div class="timeline-item active">
+                <div class="timeline-item done">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 5-6</h3>
                         <p>Literature review, key requirements defined, low-fi to high-fi prototype development</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item done">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 7-8</h3>
-                        <p>Poster presentation, alpha system demo, initial user testing</p>
+                        <p>Poster presentation, alpha system demo, peer evaluation feedback collected</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item done">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Week 9-10</h3>
-                        <p>Usability testing, iteration, final submission (portfolio + system + video)</p>
+                        <p>Iteration (Large Font Mode, celebration animation), final portfolio, system refinement, demo video</p>
                     </div>
                 </div>
             </div>
@@ -647,6 +1007,7 @@
         <div class="container">
             <h2 class="section-title">References</h2>
             <div class="references-list">
+                <h3 style="font-family: 'Inter', sans-serif; font-size: 1.1rem; margin-bottom: 16px; color: var(--primary);">Academic References</h3>
                 <p>[1] S. Misra, L. Cheng, J. Genevie, and M. Yuan, "The iPhone effect: The quality of in-person social interactions in the presence of mobile devices," <em>Environ. Behav.</em>, vol. 48, no. 2, pp. 275-298, 2016.</p>
                 <p>[2] R. Fivush, J. G. Bohanek, and W. Zaman, "Personal and intergenerational narratives in relation to adolescents' well-being," <em>New Dir. Child Adolesc. Dev.</em>, no. 131, pp. 45-57, 2011.</p>
                 <p>[3] M. Sun, Z. Zhao, and H. Liu, "Fostering intergenerational communication through games: An exploratory study on metaphorical life games in family settings," <em>Front. Public Health</em>, vol. 13, p. 1532603, 2025.</p>
@@ -655,6 +1016,10 @@
                 <p>[6] T. Jeong, G. Hwang, and D. Y. Kim, "A generative AI framework for cognitive intervention in older adults: An integrated engineering design and clinical protocol," <em>Healthcare</em>, vol. 13, no. 24, p. 3225, 2025.</p>
                 <p>[7] T. Correa, "Bottom-up technology transmission within families: Exploring how youths influence their parents' digital media use with dyadic data," <em>J. Commun.</em>, vol. 64, no. 1, pp. 103-124, 2014.</p>
                 <p>[8] J. Hu, M. Ye, H. Wan, and W. Leong, "The impact of digital reverse mentoring on older adults' digital literacy: Mediating roles of self-perceptions of aging and self-efficacy," <em>Innov. Aging</em>, vol. 10, no. 3, igag001, 2026.</p>
+
+                <h3 style="font-family: 'Inter', sans-serif; font-size: 1.1rem; margin: 32px 0 16px; color: var(--accent);">AI Tools & Acknowledgements</h3>
+                <p>[9] Claude Code (Anthropic), claude-opus-4-20250514, accessed 2026-03-01 to 2026-05-08, available at <a href="https://claude.ai" target="_blank">https://claude.ai</a>. Used for vibe coding the React prototype components, implementing accessibility features, and assisting with GitHub Pages deployment configuration.</p>
+                <p>[10] Figma, accessed 2026-02-20 to 2026-04-15, available at <a href="https://figma.com" target="_blank">https://figma.com</a>. Used for wireframing and mid-fidelity prototype design.</p>
             </div>
         </div>
     </section>
