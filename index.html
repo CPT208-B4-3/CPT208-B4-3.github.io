@@ -1266,13 +1266,22 @@
                             <li><strong>Deployment:</strong> AI assisted with Vite configuration and GitHub Pages deployment setup</li>
                         </ul>
 
-                        <h4>How we validated AI-generated code:</h4>
-                        <ul>
-                            <li>Manual testing of all user flows on multiple device sizes</li>
-                            <li>Peer review against our design requirements document</li>
-                            <li>Checking accessibility standards (touch target sizes, contrast ratios, font scaling)</li>
-                            <li>Iterative refinement based on team discussion and peer feedback</li>
-                        </ul>
+                        <h4>Technical Reflection — P-O-A Framework</h4>
+                        <p>Below we reflect on two specific AI-assisted development episodes using the <strong>Prompt–Outcome–Action</strong> framework:</p>
+
+                        <div class="poa-example">
+                            <h5>Example 1: Large Font Mode (Accessibility Feature)</h5>
+                            <p><strong>P (Prompt):</strong> "Create a React Context that provides <code>largeFont</code> (boolean) and <code>setLargeFont</code> to all screen components. Move the toggle into the RoleSelectScreen, specifically on the Grandparent card's top-right corner as a gear icon. When toggled, all font sizes should increase by 30–50% and touch targets should enlarge to 52px+."</p>
+                            <p><strong>O (Outcome):</strong> AI successfully generated <code>FontContext.tsx</code> and migrated all seven screen components from prop-based state to the Context hook pattern. However, the first iteration incorrectly placed the settings toggle on the HomeScreen instead of the RoleSelectScreen — the placement did not match our intended user flow where accessibility should be configured before entering the main experience.</p>
+                            <p><strong>A (Action):</strong> We refined the prompt to explicitly specify "on the Grandparent role card's top-right corner in RoleSelectScreen." After regeneration, the placement was correct. We then validated the feature with 3 peer reviewers acting as grandparent users, confirming that (a) the gear icon was discoverable, (b) all text and buttons scaled correctly without overflow, and (c) touch targets met the 52px minimum threshold.</p>
+                        </div>
+
+                        <div class="poa-example">
+                            <h5>Example 2: Quiz Celebration Animation</h5>
+                            <p><strong>P (Prompt):</strong> "Add a confetti celebration animation when the user completes all quiz questions. Use CSS keyframes (no external libraries). Show colourful dots/particles falling, an animated score counter, and encouraging text. The animation should feel joyful and reinforce positive feedback."</p>
+                            <p><strong>O (Outcome):</strong> The generated animation was visually appealing and matched our design intent for a joyful reward moment. However, the initial version rendered 50 particle elements with complex transform sequences, causing noticeable frame drops on lower-end mobile devices during testing.</p>
+                            <p><strong>A (Action):</strong> We manually reduced the particle count from 50 to 30, added <code>will-change: transform</code> for GPU acceleration, and simplified the keyframe interpolation steps. After optimization, the animation ran smoothly at 60fps on both iPhone 12 and Pixel 6 emulators. Peer feedback confirmed it "makes you want to play again" — validating that performance optimization did not compromise the emotional impact.</p>
+                        </div>
 
                         <h4>Ethical considerations:</h4>
                         <ul>
